@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
     <head>
         <script src="https://cdn.tailwindcss.com"></script>
@@ -18,4 +19,26 @@
                  <!--item 2-->
         </div>
     </body>
+=======
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="flex p-10 gap-5 bg-red-500">
+            <!--flex by default is in row layout-->
+            <div class="p-5 bg-yellow-400"></div>
+            <!--item layout-->
+            <div class="p-5 ml-auto bg-blue-400"></div>
+            <!--item 2-->
+        </div>
+        <div class="flex-col p-10 bg-green-500">
+            <!--felx col is in column layout-->
+            <div class="p-5 bg-yellow-400"></div>
+            <!--item 1-->
+                 <div class="p-5 bg-blue-400"></div>
+                 <!--item 2-->
+        </div>
+    </body>
+>>>>>>> 97329fcc57d8f23907b177ec06811bb8d41f2ee6
 </html>
