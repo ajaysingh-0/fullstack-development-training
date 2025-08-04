@@ -1,0 +1,26 @@
+import React from "react";
+import Header from "./Header";
+import HomePage from "./HomePage";
+import Footer from "./Footer";
+import ProfilePage from "./ProfilePage";
+import FriendsPage from "./FriendsPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+     <BrowserRouter>
+      <Header />
+      
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/friends" element={<FriendsPage />} />
+        </Routes>
+
+
+      <Footer />
+       </BrowserRouter>
+  );
+}
+
+export default App;
