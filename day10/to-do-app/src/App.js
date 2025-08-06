@@ -1,0 +1,58 @@
+import Header from './Header'
+import HomePage from './HomePage'
+import Footer from './Footer'
+import AddTodoPage from './AddTodoPage'
+import ShowTodoPage from './ShowTodoPage'
+import DoneTodoPage from './DoneTodoPage'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+
+function App() {
+  // todo is a state type of arrays of object
+  let [todo, setTodo] = useState([
+    {
+      "id": 1,
+      "todoTitle": "buy grocery",
+      "dueDate": "05/08/2025",
+      "completeDate": "",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "todoTitle": "go to gym",
+      "dueDate": "05/08/2025",
+      "completeDate": "",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "todoTitle": "learn react",
+      "dueDate": "05/08/2025",
+      "completeDate": "",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "todoTitle": "play cricket",
+      "dueDate": "05/08/2025",
+      "completeDate": "",
+      "status": "pending"
+    }])
+
+  return (
+    <BrowserRouter>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/todo-add" element={<AddTodoPage todo={todo} setTodo={setTodo} />} />
+        <Route path="/todo-show" element={<ShowTodoPage todo={todo} setTodo={setTodo} />} />
+        <Route path="/todo-done" element={<DoneTodoPage />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
+  );
+}
+
+export default App;
